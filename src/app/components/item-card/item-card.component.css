@@ -8,11 +8,13 @@
   .card-body{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .card-body img{
     border-radius: 50%;
     height: 80px;
+    /* border: 1px solid black; */
   }
 
   .card-title{
