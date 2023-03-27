@@ -16,9 +16,11 @@ import { ROOT_REDUCERS } from './store/app.state';
 import { AppComponent } from './app.component';
 import { SalePageComponent } from './pages/sale-page/sale-page.component';
 import { ItemsEffects } from './store/effects/items.effects';
+import { ListItemsComponent } from './components/list-items/list-items.component';
+import { ItemCardComponent } from './components/item-card/item-card.component';
 
 @NgModule({
-  declarations: [AppComponent, SalePageComponent],
+  declarations: [AppComponent, SalePageComponent, ListItemsComponent, ItemCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

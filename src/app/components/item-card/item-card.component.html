@@ -1,0 +1,9 @@
+<div class="card card-hover mb-3">
+  <div class="card-body">
+    <img src="{{ item.imageUrl }}" alt="" />
+    <div>
+      <h5 class="card-title">{{ item.name }}</h5>
+      <p class="card-text">{{ item.price | currency : "S/." }}</p>
+    </div>
+  </div>
+</div>
