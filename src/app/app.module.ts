@@ -15,6 +15,7 @@ import { ROOT_REDUCERS } from './store/app.state';
 // Components
 import { AppComponent } from './app.component';
 import { SalePageComponent } from './pages/sale-page/sale-page.component';
+import { ItemsEffects } from './store/effects/items.effects';
 
 @NgModule({
   declarations: [AppComponent, SalePageComponent],
@@ -23,7 +24,7 @@ import { SalePageComponent } from './pages/sale-page/sale-page.component';
     AppRoutingModule,
     StoreModule.forRoot(ROOT_REDUCERS),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([ItemsEffects]),
     BrowserAnimationsModule,
     NgbModule,
   ],

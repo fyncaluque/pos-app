@@ -5,5 +5,5 @@ export const loadItems = createAction('[Sale Page] Start load items');
 
 export const loadedItems = createAction(
   '[List Items] Loaded items',
-  props<{ items: ItemModel[] }>()
+  props<{ payload: ItemModel[] }>()
 );

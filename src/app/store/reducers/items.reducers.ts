@@ -4,7 +4,7 @@ import { loadedItems, loadItems } from '../actions/items.actions';
 
 export const initialState: ItemsStateModel = { loading: false, items: [] };
 
-export const itemsReducer = createReducer(
+export const ItemsReducer = createReducer(
   initialState,
 
   on(loadItems, (state) => ({
@@ -15,5 +15,6 @@ export const itemsReducer = createReducer(
   on(loadedItems, (state, action) => ({
     ...state,
     loading: false,
+    items: action.payload,
   }))
 );

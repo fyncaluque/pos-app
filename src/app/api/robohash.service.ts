@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { delay, of } from 'rxjs';
+import { delay, Observable, of } from 'rxjs';
 import { ItemModel } from '../models/item.model';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { ItemModel } from '../models/item.model';
 export class RobohashService {
   constructor() {}
 
-  getData() {
+  getData(): Observable<ItemModel[]> {
     const data: ItemModel[] = [
       {
         id: '1',
