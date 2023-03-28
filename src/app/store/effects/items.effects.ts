@@ -13,7 +13,7 @@ export class ItemsEffects {
         this.robohashService.getData().pipe(
           map((items) => ({
             type: '[List Items] Loaded items',
-            payload: items,
+            items,
           })),
           catchError(() => EMPTY)
         )

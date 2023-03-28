@@ -13,3 +13,8 @@ export const selectLoading = createSelector(
   selectItemsFeacture,
   (state: ItemsStateModel) => state.loading
 );
+
+export const selectItemsCart = createSelector(
+  selectItemsFeacture,
+  (state: ItemsStateModel) => state.itemsCart
+);

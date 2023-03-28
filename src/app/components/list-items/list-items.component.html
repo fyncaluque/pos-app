@@ -1,3 +1,20 @@
 <div class="row">
-    <app-item-card class="col-lg-4" *ngFor="let item of items$|async" [item]="item" />
+  <input type="text" [(ngModel)]="filterValue" />
+  <input type="number" [(ngModel)]="minPrice" />
+  <input type="number" [(ngModel)]="maxPrice" />
+
+  <ng-container *ngIf="items$ | async as items">
+    <ng-container
+      *ngFor="
+        let item of items
+          | filterItems : filterValue
+          | filterPrice : minPrice : maxPrice
+      "
+    >
+      <app-item-card class="col-lg-4" [item]="item"></app-item-card>
+    </ng-container>
+  </ng-container>
+  <!-- <ng-container *ngFor="let item of items$ |async|filterItems:filterValue">        
+        <app-item-card class="col-lg-4"  [item]="item" />
+    </ng-container> -->
 </div>
